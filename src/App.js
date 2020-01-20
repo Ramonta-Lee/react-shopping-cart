@@ -17,11 +17,10 @@ function App() {
   console.log("cart", cart);
   const addItem = item => {
     // add the given item to the cart
-
     return setCart([...cart, { item }]);
   };
 
-  console.log("setcart to state", cart);
+  console.log("addItem", cart);
 
   const removeItem = id => {
     setCart(
@@ -42,7 +41,7 @@ function App() {
 
           <Route path="/cart">
             {" "}
-            <ShoppingCart cart={cart} />}
+            <ShoppingCart cart={cart} />
           </Route>
         </CartContext.Provider>
       </ProductContext.Provider>
